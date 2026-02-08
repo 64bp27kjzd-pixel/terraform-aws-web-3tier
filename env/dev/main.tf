@@ -85,4 +85,5 @@ module "ecs" {
   subnet_ids = module.subnet.private_subnet_ids
   sg_id      = module.sg.ecs_sg_id
   tg_arn     = module.alb.tg_arn
+  image = "${module.ecr_nginx.repository_url}"
 }

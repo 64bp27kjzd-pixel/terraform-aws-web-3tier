@@ -18,3 +18,8 @@ variable "region" {
   type        = string
   default     = "ap-northeast-1"
 }
+
+variable "image" {
+  type        = string
+  description = "Container image URI for ECS task"
+}

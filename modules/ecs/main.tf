@@ -36,7 +36,7 @@ resource "aws_ecs_task_definition" "this" {
   container_definitions = jsonencode([
     {
       name  = "nginx"
-      image = "${module.ecr_nginx.repository_url}:latest"
+      image = var.image
       portMappings = [
         { containerPort = 80, protocol = "tcp" }
       ]
