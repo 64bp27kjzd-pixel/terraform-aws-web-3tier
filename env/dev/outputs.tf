@@ -12,3 +12,8 @@ output "ecs_cluster_id" {
   description = "ECS Cluster ID"
   value       = module.ecs.cluster_id
 }
+
+output "ecr_nginx_repository_url" {
+  value       = module.ecr_nginx.repository_url
+  description = "The URI of the nginx ECR repository"
+}
