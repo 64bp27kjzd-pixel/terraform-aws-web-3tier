@@ -34,3 +34,7 @@ module "ecs" {
   sg_id      = module.sg.ecs_sg_id
   tg_arn     = module.alb.tg_arn
 }
+
+output "alb_dns" {
+  value = module.alb.alb_dns
+}
