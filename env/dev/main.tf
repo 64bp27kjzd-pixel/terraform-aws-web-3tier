@@ -37,7 +37,7 @@ module "route_table" {
 # Security Group
 # --------------------
 module "sg" {
-  source = "../../modules/network/security-group"
+  source = "../../modules/security/security-group"
 
   vpc_id = module.vpc.vpc_id
 }
@@ -57,7 +57,7 @@ module "alb" {
 # VPC Endpoint
 # --------------------
 module "vpc_endpoint" {
-  source = "../../modules/vpc-endpoint"
+  source = "../../modules/network/vpc-endpoint"
 
   vpc_id          = module.vpc.vpc_id
   subnet_ids      = module.subnet.private_subnet_ids
