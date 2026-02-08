@@ -1,7 +1,3 @@
-variable "vpc_id" {}
-variable "public_subnet_ids" {}
-variable "private_subnet_ids" {}
-
 resource "aws_internet_gateway" "this" {
   vpc_id = var.vpc_id
 }

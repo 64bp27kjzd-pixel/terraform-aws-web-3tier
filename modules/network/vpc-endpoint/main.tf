@@ -1,17 +1,3 @@
-variable "vpc_id" {}
-
-variable "private_subnet_ids" {
-  description = "Private subnet IDs for Interface Endpoints"
-}
-
-variable "endpoint_sg_id" {
-  description = "Security group ID for Interface Endpoints"
-}
-
-variable "private_route_table_ids" {
-  description = "Route table IDs for S3 Gateway Endpoint"
-}
-
 # ECR API Endpoint
 resource "aws_vpc_endpoint" "ecr_api" {
   vpc_id              = var.vpc_id

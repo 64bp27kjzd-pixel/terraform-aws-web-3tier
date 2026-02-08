@@ -1,6 +1,3 @@
-variable "cidr" {}
-variable "name" {}
-
 resource "aws_vpc" "this" {
   cidr_block           = var.cidr
   enable_dns_support   = true
@@ -9,8 +6,4 @@ resource "aws_vpc" "this" {
   tags = {
     Name = var.name
   }
-}
-
-output "id" {
-  value = aws_vpc.this.id
 }
