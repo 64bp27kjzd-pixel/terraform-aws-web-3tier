@@ -59,11 +59,12 @@ module "alb" {
 module "vpc_endpoint" {
   source = "../../modules/network/vpc-endpoint"
 
-  vpc_id          = module.vpc.vpc_id
-  subnet_ids      = module.subnet.private_subnet_ids
-  endpoint_sg_id           = module.sg.ecs_sg_id
+  vpc_id                 = module.vpc.vpc_id
+  private_subnet_ids     = module.subnet.private_subnet_ids
+  endpoint_sg_id         = module.sg.ecs_sg_id
   private_route_table_ids = module.route_table.private_route_table_ids
 }
+
 
 # --------------------
 # ECS
