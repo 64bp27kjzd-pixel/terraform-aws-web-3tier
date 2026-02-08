@@ -65,6 +65,16 @@ module "vpc_endpoint" {
   private_route_table_ids = module.route_table.private_route_table_ids
 }
 
+# --------------------
+# ECR
+# --------------------
+module "ecr_nginx" {
+  source = "../../modules/ecr"
+  name   = "nginx"
+  tags = {
+    Environment = "dev"
+  }
+}
 
 # --------------------
 # ECS

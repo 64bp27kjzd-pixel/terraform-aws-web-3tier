@@ -12,3 +12,9 @@ variable "tg_arn" {
   description = "ALB Target Group ARN"
   type        = string
 }
+
+variable "region" {
+  description = "AWS region"
+  type        = string
+  default     = "ap-northeast-1"
+}
