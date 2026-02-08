@@ -61,8 +61,8 @@ module "vpc_endpoint" {
 
   vpc_id          = module.vpc.vpc_id
   subnet_ids      = module.subnet.private_subnet_ids
-  sg_id           = module.sg.ecs_sg_id
-  route_table_ids = module.route_table.private_route_table_ids
+  endpoint_sg_id           = module.sg.ecs_sg_id
+  private_route_table_ids = module.route_table.private_route_table_ids
 }
 
 # --------------------
